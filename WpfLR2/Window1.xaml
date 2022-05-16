@@ -11,9 +11,5 @@
         IsVisibleChanged="Window_IsVisibleChanged">
     <TextBlock x:Name="textBlock" HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
-        
-    <Grid>
-
-    </Grid>
 
 </Window>

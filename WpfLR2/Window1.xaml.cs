@@ -19,10 +19,10 @@ namespace WpfLR2
     /// </summary>
     public partial class Window1 : Window
     {
+        int count=0;
         public Window1()
         {
             InitializeComponent();
-            int count;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
