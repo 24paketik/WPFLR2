@@ -9,10 +9,12 @@
         ResizeMode="CanMinimize" Loaded="Window_Loaded">
     <StackPanel Margin="5">
         <Button x:Name="button1" MinWidth="200" Margin="5"
-                Content="Открыть подчиненое окно"
-                Padding="5" Click="button1_Click"/>
+         Content="Открыть подчиненное окно" 
+                Padding="5" Click="button1_Click" />
         <Button x:Name="button2" Margin="5"
-                Content="Открыть диалоговое окно" Padding="5"
+                Content="Открыть диалоговое окно" Padding="5" 
                 Click="button2_Click"/>
+
+
     </StackPanel>
 </Window>

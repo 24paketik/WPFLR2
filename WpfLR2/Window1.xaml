@@ -6,10 +6,8 @@
         xmlns:local="clr-namespace:WpfLR2"
         mc:Ignorable="d"
         Title="Подчиненное окно" Height="300" Width="300"
-        ShowInTaskbar="False"
-        Closing="Window_Closing"
-        IsVisibleChanged="Window_IsVisibleChanged">
+        ShowInTaskbar="False" Closing="Window_Closing" IsVisibleChanged="Window_IsVisibleChanged" >
     <TextBlock x:Name="textBlock" HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+               VerticalAlignment="Center"/>
 
 </Window>

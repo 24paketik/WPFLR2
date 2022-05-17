@@ -23,27 +23,32 @@ namespace WpfLR2
 
         Window1 win1 = new Window1();
         Window2 win2 = new Window2();
+
         public MainWindow()
         {
             InitializeComponent();
         }
-        public void Window_Loaded(object sender, RoutedEventArgs e)
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Window2 win2 = new Window2();
+            win1.Owner = this;
+            win2.Owner = this;
             win1.Left = this.Left + this.ActualWidth - 10;
             win1.Top = this.Top + this.ActualHeight - 10;
-        }
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            win2.Show();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+
             if (win1.IsVisible)
                 win1.Close();
             else
                 win1.Show();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            win2.ShowDialog();
         }
     }
 }

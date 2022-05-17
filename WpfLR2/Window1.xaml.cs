@@ -19,7 +19,7 @@ namespace WpfLR2
     /// </summary>
     public partial class Window1 : Window
     {
-        int count=0;
+        int count;
         public Window1()
         {
             InitializeComponent();
@@ -27,8 +27,12 @@ namespace WpfLR2
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+
+
             e.Cancel = true;
-            Hide();
+            if (MessageBox.Show("Закрыть  окно?", "Подтверждение", MessageBoxButton.YesNo,
+                MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
+                Hide();
         }
 
         private void Window_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -36,7 +40,7 @@ namespace WpfLR2
             (Owner.FindName("button1") as Button).Content = IsVisible ?
                 "Закрыть подчиненное окно" : "Открыть подчиненное окно";
             if (IsVisible)
-                textBlock.Text = "Окно открыто в " + (++count) + "-й раз";
+                textBlock.Text = "Окно открыто в " + (++count) + "-й раз. ";
         }
     }
 }

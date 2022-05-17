@@ -8,8 +8,36 @@
         Title="Диалоговое окно" Height="300" Width="300"
         ShowInTaskbar="False" WindowStyle="ToolWindow"
         Closing="Window_Closing">
-        
-    <Grid>
-        
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Загаловок главного окна: " Margin="5" />
+        <Label Content="Заголовок подчиненного окна: " Margin="5,6,5,5"
+               Grid.Row="1"/>
+        <TextBlock x:Name="textBox1" Grid.Column="1"
+            Text="Главное окнооооооо" Margin="10,5,-68,4"
+             MinWidth="200"/>
+        <TextBlock x:Name="textBox2" Grid.Column="1" 
+                  Margin="10,10,0,0" Grid.Row="1" Text="Подчиненно окно"
+                  TextBoxBase.TextChanged="textBox2_TextChanged">
+        </TextBlock>
+        <StackPanel Grid.ColumnSpan="2" 
+                    HorizontalAlignment="Right" Margin="0"
+                    Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="button1" Content="Ok" Width="90"
+                    Margin="5,61,5,5" IsDefault="True" Click="button1_Click"/>
+            <Button x:Name="button2" Content="Применить"
+                    Width="75" Margin="5,61,5,5" Click="button2_Click" />
+            <Button Content="Отмена" Width="75" Margin="5,61,5,5"
+                    IsCancel="True"/>
+        </StackPanel>
     </Grid>
 </Window>
